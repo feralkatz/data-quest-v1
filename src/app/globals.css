@@ -18,6 +18,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes fade-in {

@@ -8,7 +8,7 @@ interface MoodSelectorProps {
 
 export function MoodSelector({ value, onChange }: MoodSelectorProps) {
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
       {MOODS.map((mood) => {
         const isSelected = value === mood.value;
         return (
@@ -16,7 +16,7 @@ export function MoodSelector({ value, onChange }: MoodSelectorProps) {
             key={mood.value}
             type="button"
             onClick={() => onChange(mood.value)}
-            className={`group relative flex flex-col items-center gap-2 rounded-2xl border-2 px-3 py-4 text-center transition-all duration-200 ${
+            className={`group relative flex min-h-24 touch-manipulation flex-col items-center justify-center gap-1.5 rounded-2xl border-2 px-2 py-3 text-center transition-all duration-200 sm:min-h-0 sm:gap-2 sm:px-3 sm:py-4 ${
               isSelected
                 ? "border-rose-400 bg-rose-50 shadow-lg shadow-rose-200/50 scale-[1.02]"
                 : "border-white/60 bg-white/50 hover:border-rose-200 hover:bg-white/80 hover:shadow-md"

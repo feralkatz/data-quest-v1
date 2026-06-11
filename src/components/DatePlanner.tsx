@@ -26,9 +26,9 @@ export function DatePlanner() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-3xl space-y-8">
-      <section className="rounded-3xl border border-white/60 bg-white/60 p-6 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:p-8">
-        <div className="mb-6">
+    <div className="mx-auto w-full max-w-3xl space-y-5 sm:space-y-8">
+      <section className="rounded-2xl border border-white/60 bg-white/60 p-4 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:rounded-3xl sm:p-8">
+        <div className="mb-5 sm:mb-6">
           <h2 className="text-lg font-bold text-slate-800">Who&apos;s going?</h2>
           <p className="text-sm text-slate-500">
             Enter both names to personalize your date quest
@@ -49,7 +49,7 @@ export function DatePlanner() {
               value={partnerOne}
               onChange={(e) => setPartnerOne(e.target.value)}
               placeholder="Alex"
-              className="w-full rounded-xl border-2 border-white/80 bg-white/80 px-4 py-3 text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-100"
+              className="w-full rounded-xl border-2 border-white/80 bg-white/80 px-4 py-3 text-base text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-100"
             />
           </div>
           <div>
@@ -65,13 +65,13 @@ export function DatePlanner() {
               value={partnerTwo}
               onChange={(e) => setPartnerTwo(e.target.value)}
               placeholder="Jordan"
-              className="w-full rounded-xl border-2 border-white/80 bg-white/80 px-4 py-3 text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-100"
+              className="w-full rounded-xl border-2 border-white/80 bg-white/80 px-4 py-3 text-base text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-rose-300 focus:ring-4 focus:ring-rose-100"
             />
           </div>
         </div>
       </section>
 
-      <section className="rounded-3xl border border-white/60 bg-white/60 p-6 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:p-8">
+      <section className="rounded-2xl border border-white/60 bg-white/60 p-4 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:rounded-3xl sm:p-8">
         <div className="mb-5">
           <h2 className="text-lg font-bold text-slate-800">Pick your vibe</h2>
           <p className="text-sm text-slate-500">
@@ -81,7 +81,7 @@ export function DatePlanner() {
         <MoodSelector value={mood} onChange={setMood} />
       </section>
 
-      <section className="rounded-3xl border border-white/60 bg-white/60 p-6 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:p-8">
+      <section className="rounded-2xl border border-white/60 bg-white/60 p-4 shadow-xl shadow-rose-100/40 backdrop-blur-xl sm:rounded-3xl sm:p-8">
         <div className="mb-5">
           <h2 className="text-lg font-bold text-slate-800">Set your budget</h2>
           <p className="text-sm text-slate-500">
@@ -95,7 +95,7 @@ export function DatePlanner() {
         type="button"
         onClick={handleGenerate}
         disabled={isGenerating}
-        className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-rose-300/40 transition-all hover:shadow-2xl hover:shadow-rose-300/50 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed"
+        className="group relative min-h-14 w-full overflow-hidden rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 px-4 py-4 text-base font-bold text-white shadow-xl shadow-rose-300/40 transition-all hover:shadow-2xl hover:shadow-rose-300/50 hover:scale-[1.01] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:px-8 sm:text-lg"
       >
         <span className="relative z-10 flex items-center justify-center gap-2">
           {isGenerating ? (

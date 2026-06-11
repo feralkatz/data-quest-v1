@@ -12,10 +12,10 @@ export function DateResult({ plan, onGenerateAnother }: DateResultProps) {
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="overflow-hidden rounded-3xl border border-white/60 bg-white/70 shadow-xl shadow-rose-200/30 backdrop-blur-xl">
-        <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 px-6 py-5">
+      <div className="overflow-hidden rounded-2xl border border-white/60 bg-white/70 shadow-xl shadow-rose-200/30 backdrop-blur-xl sm:rounded-3xl">
+        <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 px-4 py-5 sm:px-6">
           <p className="text-sm font-medium text-white/80">Your quest awaits</p>
-          <h2 className="mt-1 text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="mt-1 break-words text-2xl font-bold leading-tight text-white sm:text-3xl">
             {plan.idea.emoji} {plan.idea.title}
           </h2>
           <p className="mt-2 text-sm text-white/90">
@@ -25,7 +25,7 @@ export function DateResult({ plan, onGenerateAnother }: DateResultProps) {
           </p>
         </div>
 
-        <div className="space-y-5 p-6">
+        <div className="space-y-5 p-4 sm:p-6">
           <p className="text-base leading-relaxed text-slate-600">
             {plan.idea.description}
           </p>
@@ -52,7 +52,7 @@ export function DateResult({ plan, onGenerateAnother }: DateResultProps) {
           <button
             type="button"
             onClick={onGenerateAnother}
-            className="w-full rounded-2xl border-2 border-dashed border-rose-200 bg-rose-50/50 py-3 text-sm font-semibold text-rose-600 transition-colors hover:border-rose-300 hover:bg-rose-50"
+            className="min-h-12 w-full touch-manipulation rounded-2xl border-2 border-dashed border-rose-200 bg-rose-50/50 px-3 py-3 text-sm font-semibold text-rose-600 transition-colors hover:border-rose-300 hover:bg-rose-50"
           >
             ✨ Generate another idea
           </button>
